@@ -1,0 +1,89 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include<cmath>
+
+using namespace std;
+int main(int argc, char *argv[])
+{
+
+int i;
+int j;
+int n;
+float x[150], y[150];
+float xinpol;
+float yinpol = 0;
+float pronum, prod;
+
+cout << "\t****METODO DE INTERPOLACION DE LAGRANGE****\n" <<endl;
+cout << "indique cantidad de puntos de n" <<endl;
+cin >> n;
+	cout <<"ingrese el valor de x" <<endl;
+		cin>> x;
+		
+			if 
+        (x >150)
+        {
+		
+    cout <<"El limite de puntos es 150 " <<endl;
+   			 cin >>x;
+		}
+    else
+    {
+     cout <<" " <<endl;
+     
+	
+	}
+
+	cout <<"ingrese el valor de y" <<endl;
+		cin>>y;
+	
+			if 
+        (y>150)
+        {
+		
+    cout <<"El valor de Y no debe ser mayor ha 150 " <<endl;
+    	cin >>y
+		}
+    else
+    {
+     cout <<" " <<endl;
+     
+
+	}
+	
+		for ( i=1; 1<=n;i++)
+		{
+		cout <<"\n\t punto x " >>x "punto y" >>y ,i,i;
+		}
+	
+	do
+	{
+		cout << "indique valor de X ha evaluar" <<endl;
+			cin>>xinpol;
+			//xinpol =ninterpolacion de X
+			}
+			
+while (x <x[1] || xinpol > [n] );
+
+//primer orden
+
+for (i=1;i<=n; i++)
+{
+	pronum=1;
+	prod=1;
+	
+	for (j=1;j<=n;j++)
+	{
+	if (i !=j)
+		{ 
+			pronum = pronum *(xinpol-x[j]);
+			prod = prod*(x[i]-x[j]);
+		}	
+	}
+	yinpol =yinpol + (pronum/prod)*y[i];
+}
+	cout <<"\n La interpolacion de Y es: " >>yinpol <<endl;
+	
+	system("PAUSE");
+}
